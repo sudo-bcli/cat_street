@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Altitude/Sky/Sky.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Altitude/Sky/Cloud/Cloud.tscn" type="PackedScene" id=2]
+
+[node name="Sky" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+Cloud = ExtResource( 2 )
+
+[node name="Sky" type="Label" parent="."]
+margin_left = -170.0
+margin_top = 12.0
+margin_right = -4.0
+margin_bottom = 37.0
+text = "Sky"
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 1085, 297 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Top" type="Position2D" parent="Spawn"]
+position = Vector2( 0, -218 )
+
+[node name="Top" type="Label" parent="Spawn/Top"]
+margin_left = 34.0
+margin_top = -10.0
+margin_right = 200.0
+margin_bottom = 15.0
+text = "Top"
+
+[node name="Bottom" type="Position2D" parent="Spawn"]
+position = Vector2( 0, 219 )
+
+[node name="Bottom" type="Label" parent="Spawn/Bottom"]
+margin_left = 34.0
+margin_top = -9.0
+margin_right = 200.0
+margin_bottom = 16.0
+text = "Bottom"
+
+[node name="Spawn" type="Label" parent="Spawn"]
+margin_left = 107.0
+margin_top = -14.0
+margin_right = 273.0
+margin_bottom = 11.0
+text = "Spawn"
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="Cloud" type="Timer" parent="Timer"]
+
+[connection signal="timeout" from="Timer/Cloud" to="." method="_on_Cloud_timeout"]

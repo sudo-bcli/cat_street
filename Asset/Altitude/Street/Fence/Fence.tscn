@@ -1,0 +1,181 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Altitude/Street/Fence/sprite/fence_rail.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Altitude/Street/Fence/sprite/fence_spike.png" type="Texture" id=4]
+
+[node name="Fence" type="Node2D"]
+
+[node name="Segment1" type="Node2D" parent="."]
+position = Vector2( 0, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment1"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment1"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment1"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment1"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment2" type="Node2D" parent="."]
+position = Vector2( 166, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment2"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment2"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment2"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment2"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment3" type="Node2D" parent="."]
+position = Vector2( 333, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment3"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment3"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment3"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment3"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment4" type="Node2D" parent="."]
+position = Vector2( 499, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment4"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment4"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment4"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment4"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment5" type="Node2D" parent="."]
+position = Vector2( 664, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment5"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment5"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment5"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment5"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment6" type="Node2D" parent="."]
+position = Vector2( 829, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment6"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment6"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment6"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment6"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment7" type="Node2D" parent="."]
+position = Vector2( 995, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment7"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment7"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment7"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment7"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment8" type="Node2D" parent="."]
+position = Vector2( 1161, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment8"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment8"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment8"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike" type="Sprite" parent="Segment8"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="Segment9" type="Node2D" parent="."]
+position = Vector2( 1328, -233 )
+
+[node name="FenceRail1" type="Sprite" parent="Segment9"]
+position = Vector2( 88, 0 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail2" type="Sprite" parent="Segment9"]
+position = Vector2( 88, 41 )
+texture = ExtResource( 3 )
+
+[node name="FenceRail3" type="Sprite" parent="Segment9"]
+position = Vector2( 88, 189 )
+texture = ExtResource( 3 )
+
+[node name="FenceSpike1" type="Sprite" parent="Segment9"]
+position = Vector2( 4, 75 )
+texture = ExtResource( 4 )
+
+[node name="FenceSpike2" type="Sprite" parent="Segment9"]
+position = Vector2( 168, 75 )
+texture = ExtResource( 4 )

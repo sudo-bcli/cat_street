@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/Spawner/Spawner.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Spawner/Enemy/Buttercat/Buttercat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/Spawner/Enemy/Popcat/PopCat.tscn" type="PackedScene" id=3]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource( 1 )
+Popcat = ExtResource( 3 )
+Buttercat = ExtResource( 2 )
+
+[node name="Popcat" type="Node2D" parent="."]
+
+[node name="Top" type="Position2D" parent="Popcat"]
+position = Vector2( 0, -255 )
+
+[node name="Label" type="Label" parent="Popcat/Top"]
+margin_left = 34.0
+margin_top = -15.0
+margin_right = 195.0
+margin_bottom = 10.0
+text = "Popcat Top"
+
+[node name="Bottom" type="Position2D" parent="Popcat"]
+position = Vector2( 0, 267 )
+
+[node name="Label" type="Label" parent="Popcat/Bottom"]
+margin_left = 28.0
+margin_top = -15.0
+margin_right = 189.0
+margin_bottom = 10.0
+text = "Popcat Bottom"
+
+[node name="Buttercat" type="Node2D" parent="."]
+
+[node name="Top" type="Position2D" parent="Buttercat"]
+position = Vector2( 0, -195 )
+
+[node name="Label" type="Label" parent="Buttercat/Top"]
+margin_left = 13.0
+margin_top = 35.0
+margin_right = 174.0
+margin_bottom = 60.0
+text = "Buttercat Top"
+
+[node name="Bottom" type="Position2D" parent="Buttercat"]
+position = Vector2( 0, 177 )
+
+[node name="Label" type="Label" parent="Buttercat/Bottom"]
+margin_left = 26.0
+margin_top = -25.0
+margin_right = 213.0
+text = "Buttercat Bottom"
+
+[node name="Item" type="Node2D" parent="."]
+position = Vector2( 55, 0 )
+
+[node name="Top" type="Position2D" parent="Item"]
+position = Vector2( 0, -200 )
+
+[node name="Label" type="Label" parent="Item/Top"]
+margin_left = 35.0
+margin_top = -11.0
+margin_right = 196.0
+margin_bottom = 14.0
+text = "Item Top"
+
+[node name="Bottom" type="Position2D" parent="Item"]
+position = Vector2( 2, 200 )
+
+[node name="Label" type="Label" parent="Item/Bottom"]
+margin_left = 23.0
+margin_top = -5.0
+margin_right = 210.0
+margin_bottom = 20.0
+text = "Item Bottom"
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="Popcat" type="Timer" parent="Timer"]
+
+[node name="Buttercat" type="Timer" parent="Timer"]
+
+[connection signal="timeout" from="Timer/Popcat" to="." method="_on_Popcat_timeout"]
+[connection signal="timeout" from="Timer/Buttercat" to="." method="_on_Buttercat_timeout"]

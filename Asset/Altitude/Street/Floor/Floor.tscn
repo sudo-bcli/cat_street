@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Altitude/Street/Floor/Floor.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Altitude/Street/Floor/sprite/floor.png" type="Texture" id=2]
+
+[node name="FloorBrick" type="StaticBody2D" groups=["Floor"]]
+collision_layer = 128
+collision_mask = 54
+constant_linear_velocity = Vector2( -150, 0 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -125, -23, 125, -22, 125, 22, -125, 22 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_Timer_timeout"]

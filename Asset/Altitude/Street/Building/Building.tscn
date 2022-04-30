@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Asset/Altitude/Street/Building/Building.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Altitude/Street/Building/sprite/building.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Altitude/Street/Building/sprite/window.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Altitude/Street/Building/sprite/basement.png" type="Texture" id=4]
+[ext_resource path="res://Asset/Altitude/Street/Fence/Fence.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Asset/Altitude/Street/Building/sprite/door.png" type="Texture" id=6]
+
+[node name="Building" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Building" type="Sprite" parent="."]
+position = Vector2( 374, -570 )
+texture = ExtResource( 2 )
+
+[node name="Window" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.737255 )
+position = Vector2( -10, 0 )
+
+[node name="TopLeft" type="Sprite" parent="Window"]
+position = Vector2( 166, -857 )
+texture = ExtResource( 3 )
+
+[node name="TopCenter" type="Sprite" parent="Window"]
+position = Vector2( 397, -857 )
+texture = ExtResource( 3 )
+
+[node name="TopRight" type="Sprite" parent="Window"]
+position = Vector2( 618, -857 )
+texture = ExtResource( 3 )
+
+[node name="BottomLeft" type="Sprite" parent="Window"]
+position = Vector2( 166, -423 )
+texture = ExtResource( 3 )
+
+[node name="BottomCenter" type="Sprite" parent="Window"]
+position = Vector2( 397, -423 )
+texture = ExtResource( 3 )
+
+[node name="BottomRight" type="Sprite" parent="Window"]
+position = Vector2( 618, -423 )
+texture = ExtResource( 3 )
+
+[node name="BasementWindow" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.690196 )
+position = Vector2( 360, -570 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Left" type="Sprite" parent="BasementWindow"]
+position = Vector2( -414, 988 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="Center" type="Sprite" parent="BasementWindow"]
+position = Vector2( 52, 988 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="Right" type="Sprite" parent="BasementWindow"]
+position = Vector2( 492, 988 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="Fence" parent="." instance=ExtResource( 5 )]
+modulate = Color( 1, 1, 1, 0.819608 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Door" type="Node2D" parent="."]
+position = Vector2( 158.25, -299.75 )
+
+[node name="Left" type="Sprite" parent="Door"]
+position = Vector2( -12.25, 25.75 )
+texture = ExtResource( 6 )
+
+[node name="Center" type="Sprite" parent="Door"]
+visible = false
+position = Vector2( 224.75, 25.75 )
+texture = ExtResource( 6 )
+
+[node name="Right" type="Sprite" parent="Door"]
+visible = false
+position = Vector2( 454.75, 25.75 )
+texture = ExtResource( 6 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_Timer_timeout"]

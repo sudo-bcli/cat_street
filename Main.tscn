@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Asset/Audio/Audio.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/UI/Title/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/Altitude/Altitude.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Asset/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Asset/UI/Console/Console.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Asset/Camera/Camera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Asset/Spawner/Spawner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Asset/UI/HUD/HUD.tscn" type="PackedScene" id=8]
+
+[node name="Main" type="Node2D"]
+
+[node name="Music" parent="." instance=ExtResource( 1 )]
+position = Vector2( 513, 300 )
+
+[node name="Camera" parent="." instance=ExtResource( 6 )]
+position = Vector2( 513, 300 )
+
+[node name="Altitude" parent="." instance=ExtResource( 3 )]
+
+[node name="Spawner" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1081, 295 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 172, 252 )
+speed = 300
+
+[node name="Title" parent="." instance=ExtResource( 2 )]
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
+visible = false
+margin_left = 13.0
+margin_top = 9.0
+margin_right = 13.0
+margin_bottom = 9.0
+
+[node name="Console" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_left = 13.0
+margin_top = 9.0
+margin_right = 13.0
+margin_bottom = 9.0

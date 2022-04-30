@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/Altitude/Street/Street.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Altitude/Street/Building/Building.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/Altitude/Street/Floor/Floor.tscn" type="PackedScene" id=3]
+
+[node name="Street" type="Node2D"]
+position = Vector2( 0, -1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+floor_scene = ExtResource( 3 )
+building_scene = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -184.0
+margin_top = 5.0
+margin_right = -18.0
+margin_bottom = 30.0
+text = "Street"
+
+[node name="BuildingSpawn" type="Node2D" parent="."]
+position = Vector2( 1404, 565 )
+
+[node name="Label" type="Label" parent="BuildingSpawn"]
+margin_left = -80.0
+margin_top = -36.0
+margin_right = 86.0
+margin_bottom = -11.0
+text = "Building Spawn"
+
+[node name="FloorSpawn" type="Node2D" parent="."]
+position = Vector2( 1218, 586 )
+
+[node name="Label" type="Label" parent="FloorSpawn"]
+margin_left = -62.0
+margin_top = -31.0
+margin_right = 72.0
+margin_bottom = -6.0
+text = "Floor Spawn"
+
+[node name="FloorSpawnTimer" type="Timer" parent="."]
+
+[node name="BuildingSpawnTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="FloorSpawnTimer" to="." method="_on_FloorSpawnTimer_timeout"]
+[connection signal="timeout" from="BuildingSpawnTimer" to="." method="_on_BuildingSpawnTimer_timeout"]

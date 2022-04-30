@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/Altitude/Cave/Cave.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Altitude/Cave/Wall/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/Altitude/Cave/StoneColumn/StoneColumn.tscn" type="PackedScene" id=3]
+
+[node name="Cave" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+Wall = ExtResource( 2 )
+StoneColumn = ExtResource( 3 )
+column_interval_min = 0.4
+
+[node name="Label" type="Label" parent="."]
+margin_left = -170.0
+margin_top = 12.0
+margin_right = -4.0
+margin_bottom = 37.0
+text = "Cave"
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 1291, 0 )
+
+[node name="TopWall" type="Position2D" parent="Spawn"]
+position = Vector2( 17, 31 )
+
+[node name="Label" type="Label" parent="Spawn/TopWall"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 174.0
+margin_bottom = 27.0
+text = "Top Wall"
+
+[node name="Stalactite" type="Position2D" parent="Spawn"]
+position = Vector2( 24, 56 )
+scale = Vector2( 1, -1 )
+
+[node name="Label" type="Label" parent="Spawn/Stalactite"]
+margin_left = -37.0
+margin_top = 27.0
+margin_right = 129.0
+margin_bottom = 52.0
+text = "Stalactite"
+
+[node name="BottomWall" type="Position2D" parent="Spawn"]
+position = Vector2( 17, 582 )
+
+[node name="Label" type="Label" parent="Spawn/BottomWall"]
+margin_left = -37.0
+margin_top = -42.0
+margin_right = 129.0
+margin_bottom = -17.0
+text = "Bottom Wall"
+
+[node name="Stalagmite" type="Position2D" parent="Spawn"]
+position = Vector2( 54, 554 )
+
+[node name="Label" type="Label" parent="Spawn/Stalagmite"]
+margin_left = -37.0
+margin_top = -54.0
+margin_right = 129.0
+margin_bottom = -29.0
+text = "Stalagmite"
+
+[node name="Spawn" type="Label" parent="Spawn"]
+margin_left = -98.0
+margin_top = 16.0
+margin_right = -26.0
+margin_bottom = 41.0
+text = "Spawn"
+
+[node name="Timer" type="Node2D" parent="."]
+position = Vector2( -1, 1 )
+
+[node name="Wall" type="Timer" parent="Timer"]
+
+[node name="Stalactite" type="Timer" parent="Timer"]
+
+[node name="Stalagmite" type="Timer" parent="Timer"]
+
+[connection signal="timeout" from="Timer/Wall" to="." method="_on_Wall_timeout"]
+[connection signal="timeout" from="Timer/Stalactite" to="." method="_on_Stalactite_timeout"]
+[connection signal="timeout" from="Timer/Stalagmite" to="." method="_on_Stalagmite_timeout"]

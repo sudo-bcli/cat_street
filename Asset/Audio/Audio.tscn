@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Audio/Music/Drum.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Asset/Audio/Audio.gd" type="Script" id=7]
+
+[node name="Audio" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Music" type="Node2D" parent="."]
+
+[node name="Drum" type="AudioStreamPlayer2D" parent="Music"]
+stream = ExtResource( 6 )
+volume_db = -80.0
+
+[node name="Space" type="AudioStreamPlayer2D" parent="Music"]
+position = Vector2( 5000, 0 )
+stream = ExtResource( 6 )
+
+[node name="Sky" type="AudioStreamPlayer2D" parent="Music"]
+stream = ExtResource( 6 )
+
+[node name="Street" type="AudioStreamPlayer2D" parent="Music"]
+stream = ExtResource( 6 )
+
+[node name="Cave" type="AudioStreamPlayer2D" parent="Music"]
+stream = ExtResource( 6 )
+
+[node name="Asia" type="AudioStreamPlayer2D" parent="Music"]
+stream = ExtResource( 6 )
